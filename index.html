@@ -11,6 +11,15 @@
   <link rel="stylesheet" type="text/css" href="css/animations.css">
   <script defer type="text/javascript" src="js/main.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+  <style>
+    .wallpaper {
+      animation-name: zoomOut;
+    }
+
+    .picture {
+      animation-name: dropIn;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,9 +28,8 @@
     <aside class="side">
       <figure id="picture" class="picture">
         <div class="picture-shadow"></div>
-        <img id="pictureImage" class="picture-image" src="images/paul.jpg" srcset="images/paul.jpg 1x,
-                    images/paul@2x.jpg 2x,
-                    images/paul@3x.jpg 3x" alt="Portrait of Paul Belfrage" width="320" height="320">
+        <img id="pictureImage" class="picture-image" src="./images/paul.webp" width="320" height="320"
+          alt="Paul Belfrage">
       </figure>
     </aside>
     <main class="about">
@@ -29,12 +37,15 @@
         Hi, I'm Paul Belfrage
       </h1>
       <p class="job">
-        Computer Science Teacher
+        Bachelor's Degree in Computer Science<br> Master's Degree in Education <br> Web Developer
       </p>
       <hr class="hr">
       <div class="description">
         <p>
-          I teach high school students in Web development, Programming and Computer and Network. Right now I started teching Unity and C#.
+          20 years of experience in Computer Science and teaching. Right now i'm working on <a
+            href="https://astronomysafari.netlify.app/">astronomysafari.netlify.app/. Beautiful astronomical objects
+            neatly sorted in type, distance and constellation. Built with HTML, CSS, JavaScript and JSON. Teaching Game
+            Development in Unity and C#, Web Development in HTML and CSS and Computer Networks.</a>
         </p>
       </div>
       <div class="contact">
@@ -72,17 +83,8 @@
       </div>
     </main>
   </div>
-  <noscript>
-    <style type="text/css">
-      .wallpaper {
-        animation-name: zoomOut;
-      }
 
-      .picture {
-        animation-name: dropIn;
-      }
-    </style>
-  </noscript>
+
 </body>
 
 </html>

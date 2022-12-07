@@ -1,7 +1,7 @@
 /* 1. Base */
 html {
-  background-color: #5f45bb;
-  background-image: linear-gradient(to bottom right, rgba(5, 41, 77, 0.9), rgba(74, 104, 225, 0.9));
+  /*   background-color: #5f45bb; */
+  background-image: linear-gradient(to bottom right, #01302666, #107e57aa);
   color: #fff;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
@@ -59,10 +59,10 @@ a {
 }
 
 .wallpaper {
-  background-image: url("../images/space-banner.jpg");
+  background-image: url("../images/green-cosmos.webp");
   background-position: center;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 1;
   position: fixed;
 }
 
