@@ -9,6 +9,9 @@
   ![](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
   ![](https://img.shields.io/badge/-Git-E84D31?style=flat-square&logo=git&logoColor=ffffff)
   ![](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
+  ![Photoshop](https://img.shields.io/badge/-Photoshop-05122A?style=flat&logo=adobe-photoshop)&nbsp;
+  ![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)\
+  ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)&nbsp;
 
 
 
