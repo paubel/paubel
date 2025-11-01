@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Paul Belfrage — computer science teacher and web developer. Portfolio of interactive projects in astronomy, data visualization and timelines, plus teaching resources and tutorials.">
   <title>Paul Belfrage - Computer Science Teacher</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+  <!--   <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+ -->
   <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/animations.css">
@@ -15,27 +18,18 @@
     .wallpaper {
       animation-name: zoomOut;
     }
-
-    .picture {
-      animation-name: dropIn;
-    }
   </style>
 </head>
 
 <body>
   <div id="wallpaper" class="wallpaper" data-image="images/space-banner.jpg"></div>
   <div class="content">
-    <aside class="side">
-      <figure id="picture" class="picture">
-        <div class="picture-shadow"></div>
-        <img id="pictureImage" class="picture-image" src="./images/paul.webp" width="320" height="320"
-          alt="Paul Belfrage">
-      </figure>
-    </aside>
     <main class="about">
-      <h1 class="name">
-        Hi, I'm Paul Belfrage
-      </h1>
+      <div class="header">
+        <img id="pictureImage" class="picture-image" src="./images/paul.webp" width="140" height="140"
+          alt="Paul Belfrage">
+        <h1 class="name">Hi, I'm Paul Belfrage</h1>
+      </div>
       <p class="job">
         ·Bachelor's Degree in Computer Science<br> ·Master's Degree in Education <br> ·Web Developer <br>
         ·Teacher
@@ -47,14 +41,55 @@
         </p>
         <br>
         <p>
-          Right now i'm working on <a href="https://astronomysafari.netlify.app/">Astronomy Safari</a>. Find beautiful
-          astronomical
-          objects
-          neatly sorted in type, distance and constellation. Built with HTML, CSS, JavaScript and JSON. </p>
+          Right now I'm working on projects that explore astronomy, data visualization and interactive timelines. Below
+          are a few highlights — click any card to open the project in a new tab.
+        </p>
         <br>
-        <p>Teaching
-          Game
-          Development in Unity and C#, Web Development in HTML and CSS and Computer Networks.</p>
+        <section class="projects">
+          <h2>Visualization Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Astronomy Safari</h3>
+              <p>Discover nebulae, galaxies and other deep-sky objects with curated images and easy filters.
+                Built with HTML, CSS and JavaScript.</p>
+              <a class="project-link" href="https://astronomysafari.netlify.app/" target="_blank"
+                rel="noopener">Visit</a>
+            </article>
+
+            <article class="project-card">
+              <h3>HR Diagram (interactive)</h3>
+              <p>An interactive Hertzsprung–Russell diagram made with D3.js. Filter stars by type, magnitude, mass and
+                more.</p>
+              <a class="project-link" href="https://hr-diagram.netlify.app/" target="_blank" rel="noopener">Visit</a>
+            </article>
+
+            <article class="project-card">
+              <h3>StarMap Filter</h3>
+              <p>Location-based starmap that uses your GPS for a personal view of the sky and powerful filtering
+                options.</p>
+              <a class="project-link" href="https://starmapfilter.netlify.app/" target="_blank" rel="noopener">Visit</a>
+            </article>
+
+            <article class="project-card">
+              <h3>Bright Stars — Catalog</h3>
+              <p>Interactive catalogue of 50 bright stars with sortable columns and quick filters for brightness and
+                location.</p>
+              <a class="project-link" href="https://bright-stars.netlify.app/" target="_blank" rel="noopener">Visit</a>
+            </article>
+
+            <article class="project-card">
+              <h3>Timeline — Scania</h3>
+              <p>A detailed interactive timeline dedicated to the history of Scania (Skåne), with zoom and pan controls.
+              </p>
+              <a class="project-link" href="https://paul-pauliskolan.github.io/timeline-scania/index-eng.html"
+                target="_blank" rel="noopener">Visit</a>
+            </article>
+          </div>
+
+        </section>
+
+        <br>
+        <p>Teaching Game Development in Unity and C#, Web Development in HTML and CSS and Computer Networks.</p>
 
       </div>
       <div class="contact">
@@ -63,28 +98,33 @@
         </a>-->
         <ul class="social">
           <li>
-            <a href="https://twitter.com/paulbelfrage" target="_blank">
-              <i class="fab fa-twitter"></i>
+            <a href="https://twitter.com/paulbelfrage" target="_blank" rel="noopener"
+              aria-label="Follow Paul Belfrage on Twitter (opens in new tab)">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
             </a>
           </li>
           <li>
-            <a href="https://github.com/paubel" target="_blank">
-              <i class="fab fa-github"></i>
+            <a href="https://github.com/paubel" target="_blank" rel="noopener"
+              aria-label="View Paul Belfrage on GitHub (opens in new tab)">
+              <i class="fab fa-github" aria-hidden="true"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/paubelfrage/" target="_blank">
-              <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/paubelfrage/" target="_blank" rel="noopener"
+              aria-label="View Paul Belfrage on LinkedIn (opens in new tab)">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UC4AmGhFpUYzcOfGkfaMomdw?view_as=subscriber" target="_blank">
-              <i class="fab fa-youtube"></i>
+            <a href="https://www.youtube.com/channel/UC4AmGhFpUYzcOfGkfaMomdw?view_as=subscriber" target="_blank"
+              rel="noopener" aria-label="Visit Paul Belfrage's YouTube channel (opens in new tab)">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/paubelspace/" target="_blank">
-              <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/paubelspace/" target="_blank" rel="noopener"
+              aria-label="Follow Paul Belfrage on Instagram (opens in new tab)">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
           </li>
         </ul>

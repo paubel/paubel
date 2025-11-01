@@ -3,8 +3,10 @@ html {
   /*   background-color: #5f45bb; */
   background-image: linear-gradient(to bottom right, #01302666, #107e57aa);
   color: #fff;
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif;
+  font-weight: normal;
+  /*   font-size: 16px; */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
@@ -40,7 +42,6 @@ main {
 
 .job,
 .button {
-  font-family: "Montserrat", "Quicksand", sans-serif;
   letter-spacing: 0.3em;
   text-transform: uppercase;
 }
@@ -77,33 +78,46 @@ main {
   display: flex;
   min-height: 100vh;
   position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 2.5rem 6vw;
 }
 
 .side {
-  max-height: 20rem;
-  max-width: 20rem;
+  max-height: 22rem;
+  width: 20rem;
+  flex: 0 0 20rem;
 }
 
 .about {
-  max-width: 36rem;
+  max-width: none;
+  width: auto;
+  flex: 1 1 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .picture {
-  padding-top: 100%;
-  position: relative;
-  width: 100%;
+  padding-top: 0;
+  position: static;
+  width: auto;
 }
 
 .picture-shadow {
-  border-radius: 740617px;
-  background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
-  position: absolute;
-  top: 10%;
+  display: none;
 }
 
 .picture-image {
-  border-radius: 740617px;
-  position: absolute;
+  border-radius: 50%;
+  position: static;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
 }
 
 .name {
@@ -125,6 +139,90 @@ main {
 
 .description {
   font-size: 1.5rem;
+}
+
+/* Projects grid */
+.projects {
+  margin-top: 1.25rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: linear-gradient(
+    180deg,
+    rgba(1, 48, 38, 0.18),
+    rgba(1, 48, 38, 0.08)
+  );
+  border-radius: 14px;
+  padding: 1rem 1rem;
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.25);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  min-height: 120px;
+}
+
+.project-card h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.05rem;
+}
+
+.project-card p {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  color: #e8f7da;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.35);
+}
+
+.project-link {
+  display: inline-block;
+  background: #cbe58e;
+  color: #012e20;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.more-projects {
+  margin-top: 1rem;
+}
+
+/* Full-width tweaks for very wide viewports */
+@media screen and (min-width: 1400px) {
+  .content {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  .about {
+    width: calc(100% - 22rem);
+  }
+}
+
+/* Small tweak for the explicit web-sites.md link */
+.all-projects-link {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.all-projects-link a {
+  color: #cbe58e;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .contact {
@@ -193,6 +291,14 @@ main {
 .social a:active {
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* Make focus visible for keyboard users */
+.social a:focus {
+  outline: 3px solid rgba(203, 229, 142, 0.9);
+  outline-offset: 3px;
+  opacity: 1;
+  transform: none;
 }
 
 /* 4. Responsiveness */

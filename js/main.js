@@ -4,7 +4,7 @@ function loadImage(id, targetId) {
   var imageToLoad;
   if (el.dataset.image) {
     imageToLoad = el.dataset.image;
-  } else if (typeof el.currentSrc === 'undefined') {
+  } else if (typeof el.currentSrc === "undefined") {
     imageToLoad = el.src;
   } else {
     imageToLoad = el.currentSrc;
@@ -12,13 +12,15 @@ function loadImage(id, targetId) {
   if (imageToLoad) {
     var img = new Image();
     img.src = imageToLoad;
-    img.onload = function() {
-      targetEl.classList.add('is-loaded');
+    img.onload = function () {
+      if (targetEl && targetEl.classList) {
+        targetEl.classList.add("is-loaded");
+      }
     };
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  loadImage('wallpaper');
-  loadImage('pictureImage', 'picture');
+document.addEventListener("DOMContentLoaded", function () {
+  loadImage("wallpaper");
+  loadImage("pictureImage");
 });
