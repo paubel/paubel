@@ -20,11 +20,11 @@ a {
   color: currentColor;
   cursor: pointer;
   text-decoration: none;
-  color: #cbe58e;
+  color: #8ee5e5;
 }
 
 main {
-  background-color: #01302622;
+  background-color: #01213099;
   padding: 1vh 1.5vw;
   border-radius: 25px;
 }
@@ -67,7 +67,7 @@ main {
 }
 
 .wallpaper {
-  background-image: url("../images/green-cosmos.webp");
+  background-image: url("../images/space-banner.jpg");
   background-position: center;
   background-size: cover;
   opacity: 1;
@@ -156,8 +156,8 @@ main {
 .project-card {
   background: linear-gradient(
     180deg,
-    rgba(1, 48, 38, 0.18),
-    rgba(1, 48, 38, 0.08)
+    rgba(2, 1, 48, 0.48),
+    rgba(3, 1, 48, 0.38)
   );
   border-radius: 14px;
   padding: 1rem 1rem;
@@ -177,19 +177,39 @@ main {
   color: #e8f7da;
 }
 
-.project-card:hover {
+/* .project-card:hover {
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.35);
-}
+} */
 
 .project-link {
   display: inline-block;
-  background: #cbe58e;
+  background: #8ee4e5;
   color: #012e20;
   padding: 0.45rem 0.75rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.25);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-link:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.85);
+}
+
+/* Press effect for mouse/touch */
+.project-link:active {
+  transform: translateY(4px) scale(0.995);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+/* Keyboard focus visible (separate from :active). Use focus-visible to avoid showing on mouse click */
+.project-link:focus-visible {
+  outline: 3px solid rgba(139, 195, 74, 0.9);
+  outline-offset: 4px;
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.25);
 }
 
 .more-projects {
