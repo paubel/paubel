@@ -9,9 +9,27 @@
   <title>Paul Belfrage - Computer Science Teacher</title>
   <!--   <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
  -->
-  <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/animations.css">
+  <!-- Optimize font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap" rel="stylesheet">
+
+  <!-- Load critical/reset and main styles without blocking render -->
+  <link rel="preload" href="css/minireset.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/minireset.min.css">
+  </noscript>
+
+  <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/main.css">
+  </noscript>
+
+  <!-- animations are non-critical for initial render -->
+  <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/animations.css">
+  </noscript>
   <script defer type="text/javascript" src="js/main.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
   <style>
@@ -50,6 +68,8 @@
           <div class="projects-grid">
             <article class="project-card">
               <h3>Astronomy Safari</h3>
+              <img class="project-thumb" src="images/thumb/ast.webp" alt="Astronomy Safari — curated deep-sky images"
+                loading="lazy">
               <p>Discover nebulae, galaxies and other deep-sky objects with curated images and easy filters.
                 Built with HTML, CSS and JavaScript.</p>
               <a class="project-link" href="https://astronomysafari.netlify.app/" target="_blank"
@@ -58,6 +78,7 @@
 
             <article class="project-card">
               <h3>HR Diagram (interactive)</h3>
+              <img class="project-thumb" src="images/thumb/hr.webp" alt="Interactive HR Diagram (D3.js)" loading="lazy">
               <p>An interactive Hertzsprung–Russell diagram made with D3.js. Filter stars by type, magnitude, mass and
                 more.</p>
               <a class="project-link" href="https://hr-diagram.netlify.app/" target="_blank" rel="noopener">Visit</a>
@@ -65,6 +86,8 @@
 
             <article class="project-card">
               <h3>StarMap Filter</h3>
+              <img class="project-thumb" src="images/thumb/star-map.webp" alt="StarMap Filter — location-based starmap"
+                loading="lazy">
               <p>Location-based starmap that uses your GPS for a personal view of the sky and powerful filtering
                 options.</p>
               <a class="project-link" href="https://starmapfilter.netlify.app/" target="_blank" rel="noopener">Visit</a>
@@ -72,14 +95,20 @@
 
             <article class="project-card">
               <h3>Bright Stars — Catalog</h3>
+              <img class="project-thumb" src="images/thumb/bright.webp" alt="Bright Stars — interactive catalog"
+                loading="lazy">
               <p>Interactive catalogue of 50 bright stars with sortable columns and quick filters for brightness and
                 location.</p>
-              <a class="project-link" href="https://paubel.github.io/brightest-stars/" target="_blank" rel="noopener">Visit</a>
+              <a class="project-link" href="https://paubel.github.io/brightest-stars/" target="_blank"
+                rel="noopener">Visit</a>
             </article>
 
             <article class="project-card">
               <h3>Timeline — Scania</h3>
-              <p>A detailed interactive timeline dedicated to the history of Scania (Skåne), with zoom and pan controls.
+              <img class="project-thumb" src="images/thumb/scania.webp" alt="Timeline — Scania history interactive"
+                loading="lazy">
+              <p>A detailed interactive timeline dedicated to the history of Scania (Skåne), Swedens southmost, with
+                zoom and pan controls.
               </p>
               <a class="project-link" href="https://paul-pauliskolan.github.io/timeline-scania/index-eng.html"
                 target="_blank" rel="noopener">Visit</a>
